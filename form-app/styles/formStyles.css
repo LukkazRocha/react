@@ -1,0 +1,22 @@
+label {
+    display: block;
+    margin-bottom: 20px;    
+}
+
+input {
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 8px;
+    outline: 0;
+}
+
+textarea {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
