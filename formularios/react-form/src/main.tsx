@@ -4,6 +4,12 @@ import { Demo } from './Demo'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Demo />
+    <section className="container">
+      <h1>Solicite uma desmonstração</h1>
+      <h4>Nós te responderemos em até 12h!</h4>
+      <Demo />
+
+    </section>
+    
   </React.StrictMode>
 )

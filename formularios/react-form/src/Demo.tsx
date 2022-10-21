@@ -1,17 +1,21 @@
 import { useForm } from "react-hook-form";
+import PhoneInput from 'react-phone-input-2'
+
 import './styles.css';
 
 export function Demo() {
     const {
       register,
-      handleSubmit,      
+      handleSubmit,  
+          
       formState: { errors }
     } = useForm({
       defaultValues: {
         "name": "",
         "company": "",
         "email": "",
-        "phone": ""
+        "phone": "",
+        "textarea": ""
       }
     });
     
@@ -42,12 +46,16 @@ export function Demo() {
         {errors.email && <p>Email é obrigatório</p>}
 
         <label>Telefone*
-          <input
-            type="tel"
-            {...register("phone", { required: true })}
+          <PhoneInput
+            placeholder="+"            
           />
         </label>
-        {errors.phone && <p>Telefone é obrigatório</p>}
+
+        <textarea 
+          rows={6}
+          placeholder="quer nos contar suas ideias?"
+          {...register("textarea")}
+        />                    
         
         <input type="submit" value="Solicitar demo" />
       </form>
