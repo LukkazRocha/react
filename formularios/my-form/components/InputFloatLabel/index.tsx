@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Input, InputProps } from "antd";
 
+export type InputFloatLabel = {
+  onClickButton?: React.MouseEventHandler<HTMLElement>;
+} & InputProps
+
 export const InputFloatLabel = ({
     placeholder, 
     value,
     ...rest
-    }: InputProps) => {
+    } : InputProps) => {
   const [focus, setFocus] = useState(false);
 
   const labelClass =
