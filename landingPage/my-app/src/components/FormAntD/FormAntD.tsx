@@ -1,5 +1,4 @@
 import { Button, Form, Input } from 'antd';
-import { InputFloatLabel } from '../InputFloatLabel/index'
 
 import "antd/dist/antd.css";
 
@@ -13,19 +12,14 @@ const validateMessages = {
   types: {
     email: '${label} deve ser válido.',
   }
-
 }
 
-export const Demo: React.FC = () => {
+export const FormAntD: React.FC = () => {
   const onFinish = (values: any) => {
     console.log(values);
   };
 
-  return (
-    <>
-    <InputFloatLabel placeholder="First Name*" />
-
-    
+  return (        
     <Form {...layout} name="nest-messages" onFinish={onFinish}
     validateMessages={validateMessages}>
 
@@ -40,13 +34,11 @@ export const Demo: React.FC = () => {
       </Form.Item>
       <Form.Item name={'introduction'} label="Descrição">
         <Input.TextArea />
-      </Form.Item>
+      </Form.Item>      
       
       <Button type="primary" htmlType="submit">
           Solicitar Demo
-        </Button>
-    </Form>
-    </>
-    
+      </Button>
+    </Form>   
   )
 }
