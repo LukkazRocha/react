@@ -1,6 +1,7 @@
 import { Button, Form, Input } from 'antd';
 
 import "antd/dist/antd.css";
+import { PhoneInputLabel } from '../PhoneInputLabel/PhoneInputLabel';
 
 const layout = {
   labelCol: { span: 8 },
@@ -23,18 +24,32 @@ export const FormAntD: React.FC = () => {
     <Form {...layout} name="nest-messages" onFinish={onFinish}
     validateMessages={validateMessages}>
 
-      <Form.Item name={'FirstName'} label="Primeiro nome" rules={[{  required:true }]}>
+      <Form.Item 
+        name={'FirstName'} 
+        label="Primeiro nome" 
+        rules={[{  required:true }]}>
         <Input />      
       </Form.Item>
-      <Form.Item name={'LastName'} label="Último nome" rules={[{  required: true }]}>
-          <Input />
+
+      <Form.Item 
+        name={'LastName'} 
+        label="Último nome" 
+        rules={[{  required: true }]}>
+        <Input />
       </Form.Item>
-      <Form.Item name={'email'} label="Email" rules={[{ required: true, type: 'email' }]}>
+
+      <Form.Item 
+        name={'email'} 
+        label="Email" 
+        rules={[{ required: true, type: 'email' }]}>
         <Input />  
       </Form.Item>
+        
+      <PhoneInputLabel  /> 
+
       <Form.Item name={'introduction'} label="Descrição">
         <Input.TextArea />
-      </Form.Item>      
+      </Form.Item>           
       
       <Button type="primary" htmlType="submit">
           Solicitar Demo

@@ -3,7 +3,7 @@ import { Input, InputProps } from "antd";
 
 export type InputFloatLabel = {
   onClickButton?: React.MouseEventHandler<HTMLElement>;
-} & InputProps
+}
 
 export const InputFloatLabel = ({
     placeholder, 

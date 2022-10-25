@@ -1,52 +1,63 @@
-import { Button, Form, Input } from 'antd';
-import { InputFloatLabel } from '../InputFloatLabel/index'
+import { InputFloatLabel } from '../InputFloatLabel/index';
+import React, { useState } from "react";
+import { Button, Form, Input} from 'antd';
 
-import "antd/dist/antd.css";
-
-const layout = {
-  labelCol: { span: 8 },
-  wrapperCol: { span: 5 },
-};
 
 const validateMessages = {
-  required: '${label} é obrigatório!.',
+  required: 'Esse ítem é obrigatório',
   types: {
-    email: '${label} deve ser válido.',
+    email: 'Digite um e-mail válido!'
   }
-
 }
 
-export const Demo: React.FC = () => {
+export const Demo = () => {
   const onFinish = (values: any) => {
     console.log(values);
   };
+  const [firstName, setFirstName] = useState<string>();
+  const [lastName, setLastName] = useState<string>();
+  const [email, setEmail] = useState<string>();
 
   return (
     <>
-    <InputFloatLabel placeholder="First Name*" />
+    <Form name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
+      <Form.Item name={'firstName'} rules={[{ required: true }]}>
+        <InputFloatLabel      
+          placeholder='Primeiro nome'
+          value={firstName}  
+          onChange={(e) => setFirstName(e.target.value)}   
+        >
+        </InputFloatLabel>  
+      </Form.Item>
 
-    
-    <Form {...layout} name="nest-messages" onFinish={onFinish}
-    validateMessages={validateMessages}>
+      <Form.Item name={'lastName'} rules={[{ required: true }]}>
+        <InputFloatLabel
+          placeholder="Último nome"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+        >
+        </InputFloatLabel>
+      </Form.Item>
+        
+      <Form.Item name={'email'} rules={[{ required: true, type: 'email' }]}>
+        <InputFloatLabel      
+          placeholder='E-mail'
+          value={email}  
+          onChange={(e) => setEmail(e.target.value)}   
+        >
+        </InputFloatLabel>  
+      </Form.Item>   
 
-      <Form.Item name={'FirstName'} label="Primeiro nome" rules={[{  required:true }]}>
-        <Input />      
-      </Form.Item>
-      <Form.Item name={'LastName'} label="Último nome" rules={[{  required: true }]}>
-          <Input />
-      </Form.Item>
-      <Form.Item name={'email'} label="Email" rules={[{ required: true, type: 'email' }]}>
-        <Input />  
-      </Form.Item>
-      <Form.Item name={'introduction'} label="Descrição">
+      <Form.Item name={'description'} label="Descrição">
         <Input.TextArea />
       </Form.Item>
-      
-      <Button type="primary" htmlType="submit">
+
+      <Form.Item wrapperCol={{ offset: 8 }}>
+        <Button type="primary" htmlType="submit">
           Solicitar Demo
         </Button>
-    </Form>
-    </>
-    
+      </Form.Item>
+    </Form> 
+    </>    
   )
 }
