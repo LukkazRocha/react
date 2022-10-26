@@ -1,5 +1,6 @@
-import type { AppProps } from 'next/app'
-import { Demo } from '../components/Demo/Demo'
+import type { AppProps } from 'next/app';
+import { Demo } from '../components/Demo/Demo';
+import  '../styles/global.css';
 
 import "../components/FloatLabel/styles.css";
 

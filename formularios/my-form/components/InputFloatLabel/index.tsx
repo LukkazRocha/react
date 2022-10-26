@@ -21,7 +21,6 @@ export const InputFloatLabel = ({
       onBlur={() => setFocus(false)}
       onFocus={() => {
         setFocus(true);
-        console.log(value);
       }}
     >
       <Input {...rest} />
