@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Input, InputProps } from "antd";
 
+import './InputFloatLabel.css'
+
 export type InputFloatLabel = {
   onClickButton?: React.MouseEventHandler<HTMLElement>;
 }

@@ -1,35 +1,36 @@
 .float-label {
-    position: relative;
-    margin-bottom: 12px;
-  }
+  position: relative;
+  margin-bottom: 12px;
+}
   
-  .label {
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 12px;
-    top: 12px;
-    transition: 0.2s ease all;
-  }
+.label {
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 12px;
+  top: 12px;
+  transition: 0.2s ease all;
+}
   
-  .label-float {
-    top: 2px;
-    color: gray;
-  }  
+.label-float {
+  top: 2px;
+  color: gray;
+}  
 
-  .ant-form-item-explain-error {
-    margin-top: -12px;
+.ant-form-item-explain-error {
+  margin-top: -12px;
 }
 
-  .ant-input {
-    padding: 16px 12px 4px 11px;
-    border-radius: 8px;    
-  }
+.ant-input {
+  padding: 16px 12px 4px 11px;
+  border-radius: 8px;  
+  font-size: 1.2rem;  
+}
 
-  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
-    border-radius: 8px;
-    height: 2.8rem;
-    padding: 5px;
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-radius: 8px;
+  height: 2.8rem;
+  padding: 5px;
 }
 
 textarea.ant-input {
@@ -44,6 +45,6 @@ textarea.ant-input {
 }
 
 .ant-btn-lg {
-  height: 2.5rem;
-  line-height: 1rem;
+  height: 3rem;
+  font-size: 1.3rem;
 }

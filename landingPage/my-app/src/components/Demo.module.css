@@ -1,0 +1,15 @@
+.container {    
+  background-color: gray; 
+  width: 85vw;  
+  margin: auto;
+  padding: 0px 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}

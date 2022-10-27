@@ -1,8 +1,8 @@
 .container {    
     background-color: gray; 
-    width: 90vw;  
+    width: 85vw;  
     margin: auto;
-    padding: 0px 20px;
+    padding: 0 2rem;
 }
 
 .header {
@@ -11,6 +11,6 @@
 }
 
 .header > h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
