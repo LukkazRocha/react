@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "antd": "^4.23.6",
+    "antd-country-phone-input": "^4.4.0",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.38.0",
     "react-phone-input-2": "^2.15.1",
-    "react-phone-number-input": "^3.2.12"
+    "react-phone-number-input": "^3.2.12",
+    "world_countries_lists": "^2.6.0"
   },
   "devDependencies": {
     "@types/node": "18.11.4",

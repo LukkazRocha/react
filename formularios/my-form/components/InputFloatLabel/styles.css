@@ -4,20 +4,46 @@
   }
   
   .label {
-    font-size: 12px;
     font-weight: normal;
     position: absolute;
     pointer-events: none;
     left: 12px;
-    top: 15px;
+    top: 12px;
     transition: 0.2s ease all;
   }
   
   .label-float {
-    top: 6px;
-    font-size: 10px;
+    top: 2px;
+    color: gray;
   }  
+
+  .ant-form-item-explain-error {
+    margin-top: -12px;
+}
 
   .ant-input {
     padding: 16px 12px 4px 11px;
+    border-radius: 8px;    
   }
+
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border-radius: 8px;
+    height: 2.8rem;
+    padding: 5px;
+}
+
+textarea.ant-input {
+  resize: none;
+  height: 8rem;
+  line-height: 1rem;
+  font-size: 1rem;
+}
+
+.ant-btn-primary {
+  border-radius: 8px;
+}
+
+.ant-btn-lg {
+  height: 2.5rem;
+  line-height: 1rem;
+}
